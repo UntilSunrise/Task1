@@ -1,0 +1,1 @@
+Did the task from screenshots from the file *.pptx
