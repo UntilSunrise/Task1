@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="newTask3_4">
+    <test name="Groups">
+        <groups>
+            <run>
+                <include name="NewJava"/>
+                <include name="CheckingL"/>
+            </run>
+        </groups>
+    </test>
+</suite>
