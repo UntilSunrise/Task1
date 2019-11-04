@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "d851c2b9-49e9-417a-8d8d-a8c206e04dae",
+		"name": "UserFunctionality",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://petstore.swagger.io/v2/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 51, \"username\": \"Admin\", \"firstName\": \"Loka\", \"lastName\": \"Jenkins\", \"email\": \"hotloka@gmail.com\", \"password\": \"qwerty123\", \"phone\": \"+380999999921\", \"userStatus\": 0}"
+				},
+				"url": "https://petstore.swagger.io/v2/user"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/user/Admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": "https://petstore.swagger.io/v2/user/Admin"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/user/Admin",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": "https://petstore.swagger.io/v2/user/Admin"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/user/login?username=Admin&password=qwerty123",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login?username=Admin&password=qwerty123",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Admin"
+						},
+						{
+							"key": "password",
+							"value": "qwerty123"
+						}
+					]
+				},
+				"description": "Test login functionality"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/user/createWithArray",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 11,\n        \"username\": \"Admin\",\n        \"firstName\": \"Fedya\",\n        \"lastName\": \"Reebov\",\n        \"email\": \"fedyareebov@gmail.com\",\n        \"password\": \"fedya960412\",\n        \"phone\": \"+380505555525\",\n        \"userStatus\": 1\n    },\n    {\n        \"id\": 12,\n        \"username\": \"FakePersona\",\n        \"firstName\": \"Nikolay\",\n        \"lastName\": \"Grishkov\",\n        \"email\": \"kolyagresha@gmail.com\",\n        \"password\": \"123kolya13\",\n        \"phone\": \"+380666666612\",\n        \"userStatus\": 1\n    },\n    {\n        \"id\": 13,\n        \"username\": \"JacksonDrive\",\n        \"firstName\": \"Hoolian\",\n        \"lastName\": \"Abdulovich\",\n        \"email\": \"jackkerman@gmail.com\",\n        \"password\": \"hoolian5812\",\n        \"phone\": \"+380505555656\",\n        \"userStatus\": 1\n    }\n]"
+				},
+				"url": "https://petstore.swagger.io/v2/user/createWithArray",
+				"description": "collection type with array - users"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/user/JacksonDrive",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 15,\n    \"username\": \"JacksonDrive\",\n    \"firstName\": \"Hoolian\",\n    \"lastName\": \"Abdulovich\",\n    \"email\": \"jackkerman@gmail.com\",\n    \"password\": \"pwd123\",\n    \"phone\": \"+380505555656\",\n    \"userStatus\": 1\n}"
+				},
+				"url": "https://petstore.swagger.io/v2/user/JacksonDrive",
+				"description": "update password, user - JacksonDrive"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/store/order/11",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": "https://petstore.swagger.io/v2/store/order/11",
+				"description": "delete - id 11"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/store/order/12",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": "https://petstore.swagger.io/v2/store/order/12",
+				"description": "delete - id 12"
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/store/order/15",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": "https://petstore.swagger.io/v2/store/order/15"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
